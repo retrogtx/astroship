@@ -15,43 +15,22 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc">FAQs.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        contact: iamamrit27@gmail.com
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        What is it? A deepfake model that does what you wish it to swap it with.<br>
+        How does it work? Based on finetuned open source models trained already, developed using pytorch<br>
+        What are the use cases? You can swap any face with anything, in a photo. Videos coming soon.<br>
+        What are the limitations? Cannot do much on blurry photographs.<br>
+        How much does it cost? Starts at $7. Email me for a custom price/discount.<br>
+        What refunds are eligible? Once a quality post has been delivered, no refunds are possible. If quality post based on the image you sent is NOT possible, I'll refund it asap.<br>
+        How willing are you to serve customers? Alot. I'm willing to go the extra mile to make sure you get what you want. If not satisfactory by a mile, I'll get you variations. For free.<br>
       </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
     </div>
   </Container>
 </Layout>
