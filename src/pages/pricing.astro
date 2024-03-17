@@ -6,16 +6,12 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Beginner",
+    price: "$7",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "3 photos",
+      "Custom Support",
     ],
     button: {
       text: "Get Started",
@@ -23,21 +19,18 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
+    name: "Medium",
     price: {
-      monthly: "$19",
+      monthly: "$9",
       annual: "$16",
       discount: "10%",
       original: "$24",
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "5 photos",
+      "High quality",
+      "T4 GPUs for processing",
     ],
     button: {
       text: "Get Started",
@@ -45,16 +38,12 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise",
+    name: "Your Plan",
     price: "Custom",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "All photos you want",
+      "Pricing upon enquiry",
     ],
     button: {
       text: "Contact us",
@@ -69,7 +58,7 @@ const pricing = [
     <Sectionhead>
       <Fragment slot="title">Pricing</Fragment>
       <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
+        Simple pricing. No Surprises.
       </Fragment>
     </Sectionhead>
 
