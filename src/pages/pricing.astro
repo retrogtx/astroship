@@ -1,70 +1,9 @@
----
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import PricingCard from "@components/pricing.astro";
-
-const pricing = [
-  {
-    name: "Beginner",
-    price: "$7",
-    popular: false,
-    features: [
-      "3 photos",
-      "Custom Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Medium",
-    price: {
-      monthly: "$9",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
-    popular: true,
-    features: [
-      "5 photos",
-      "High quality",
-      "T4 GPUs for processing",
-    ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
-  },
-  {
-    name: "Your Plan",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All photos you want",
-      "Pricing upon enquiry",
-    ],
-    button: {
-      text: "Contact us",
-      link: "mailto:iamamrit27@gmail.com",
-    },
-  },
-];
-
----
-
-<Layout title="Pricing">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
-      <Fragment slot="desc">
-        Simple pricing. No Surprises.
-      </Fragment>
-    </Sectionhead>
-
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
-    </div>
-  </Container>
-</Layout>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center font-mono">
+  <a href="/" class="text-lg">
+    <span class="font-bold text-white">Face</span><span class="text-slate-500">swap</span>
+  </a>
+  <div class="w-full max-w-screen-lg rounded-lg overflow-hidden shadow-xl">
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <stripe-pricing-table pricing-table-id="prctbl_1OwI2ZSGg1fuLjaUKdgNq2Bh" publishable-key="pk_live_51OurjISGg1fuLjaUtZyIH3eTKawRIPrHKhAy6tVJ2XxZ7FAR3olnx8p0Ao7cz6bq7G9lrETH6mAWZ2JC0Nc6LhW300g2aH42uh"></stripe-pricing-table>
+  </div>
+</body>
